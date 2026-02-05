@@ -33,7 +33,7 @@
 /**
 * @brief Максимальное количество выловленной рыбы
 */
-#define MAXFISH 100
+#define MAXFISH 10000
 
 
 using namespace std;
