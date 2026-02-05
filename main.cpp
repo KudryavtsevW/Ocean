@@ -82,9 +82,15 @@ void check_memory_requirements() {
     std::cout << "Всего рыб: " << total_fish << std::endl;
     std::cout << "Размер одной рыбы: " << fish_size << " байт" << std::endl;
     std::cout << "Общая память для рыб: " << total_memory / 1024 / 1024 << " MB" << std::endl;
+    std::cout << "Плюс память для указателей: "
+            << (total_fish * sizeof(Fish*)) / 1024 / 1024 << " MB" << std::endl;
+    std::cout << "Итого: "
+            << (total_memory + total_fish * sizeof(Fish*)) / 1024 / 1024
+            << " MB" << std::endl;
 
     std::cout<<"Размер одного корабля " <<sizeof(Ship)<<" байт\n";
-    std::cout<<"Всего памяти на корабли и точки рыбы "<<FIELD_SIZE*(sizeof(Ship)) / 1024 / 1024 + total_memory  / 1024 / 1024<<" MB\n";
+    std::cout<<"Общая память для кораблей"<<(FIELD_SIZE*(sizeof(Ship))) / 1024 / 1024 <<" MB\n";
+    std::cout<<"Всего памяти на корабли и точки рыбы "<<FIELD_SIZE*(sizeof(Ship)) / 1024 / 1024 + (total_memory + total_fish * sizeof(Fish*)) / 1024 / 1024<<" MB\n";
 }
 
 int main() {
