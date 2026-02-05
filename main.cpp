@@ -52,7 +52,7 @@ void fill_ocean(FishMatrix &fishmap) {
     }
     cout << "\033[" << 4 << ";" << 0 << "H"<<(double(count)/delimetr)*100<<"%";
     cout.flush();
-    cout<<"\nИнициализация завершена\n";
+    cout<<"\n\nИнициализация завершена\n";
 }
 
 void clearScreen() {

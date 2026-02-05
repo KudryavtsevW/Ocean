@@ -48,7 +48,7 @@
 #Установка make
 sudo apt-get install make
 # Клонирование репозитория
-git clone git@github.com:KudryavtsevW/Ocean.git
-cd ocean
+git clone https://github.com/KudryavtsevW/Ocean.git
+cd Ocean
 make
 ./program
